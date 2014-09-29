@@ -1,0 +1,55 @@
+{
+  "name": "empty-trash",
+  "version": "0.0.0",
+  "description": "Empty the trash",
+  "license": "MIT",
+  "repository": "sindresorhus/empty-trash",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "bin": {
+    "empty-trash": "cli.js"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js",
+    "cli.js",
+    "vendor/nircmdc.exe",
+    "vendor/trash-cli/trashcli/*.py",
+    "vendor/trash-empty"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    "bin",
+    "trash",
+    "recycle",
+    "file",
+    "files",
+    "dir",
+    "directory",
+    "directories",
+    "empty",
+    "clear",
+    "osx",
+    "windows",
+    "linux"
+  ],
+  "dependencies": {
+    "minimist": "^1.1.0",
+    "run-applescript": "^1.0.0",
+    "update-notifier": "^0.2.0"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "trash": "^1.1.3",
+    "user-home": "^1.0.0"
+  }
+}
