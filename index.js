@@ -1,15 +1,11 @@
 'use strict';
 var path = require('path');
 var execFile = require('child_process').execFile;
-var xdgEmptyTrash = require('xdg-empty-trash');
+var linux = require('xdg-empty-trash');
 var runApplescript = require('run-applescript');
 
 function osx(cb) {
 	runApplescript('tell app "Finder" to empty trash', cb);
-}
-
-function linux(cb) {
-	xdgEmptyTrash(cb);
 }
 
 function win(cb) {
