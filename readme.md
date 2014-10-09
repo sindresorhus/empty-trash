@@ -38,7 +38,7 @@ emptyTrash(function (err) {
 
 On OS X AppleScript is used as it's the only way to do it without incurring permission issues.
 
-On Linux [trash-cli](https://github.com/andreafrancia/trash-cli) is used. Requires Python. [Help wanted on a Node version.](https://github.com/sindresorhus/trash/issues/1)
+On Linux [xdg-empty-trash](https://github.com/kevva/xdg-empty-trash) is used.
 
 On Windows [NirCmd](http://www.nirsoft.net/utils/nircmd.html) is used.
 
