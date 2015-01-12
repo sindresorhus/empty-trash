@@ -1,31 +1,17 @@
 #!/usr/bin/env node
 'use strict';
 var updateNotifier = require('update-notifier');
-var argv = require('minimist')(process.argv.slice(2));
-var pkg = require('./package.json');
+var meow = require('meow');
 var emptyTrash = require('./');
 
-function help() {
-	console.log([
-		'',
-		'  ' + pkg.description,
-		'',
-		'  Usage',
-		'    empty-trash'
-	].join('\n'));
-}
+var cli = meow({
+	help: [
+		'Usage',
+		'  empty-trash'
+	].join('\n')
+});
 
-updateNotifier({pkg: pkg}).notify();
-
-if (argv.version) {
-	console.log(pkg.version);
-	return;
-}
-
-if (argv.help) {
-	help();
-	return;
-}
+updateNotifier({pkg: cli.pkg}).notify();
 
 emptyTrash(function (err) {
 	if (err) {
