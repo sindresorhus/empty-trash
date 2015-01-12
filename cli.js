@@ -4,7 +4,6 @@ var updateNotifier = require('update-notifier');
 var argv = require('minimist')(process.argv.slice(2));
 var pkg = require('./package.json');
 var emptyTrash = require('./');
-var input = argv._;
 
 function help() {
 	console.log([
@@ -16,10 +15,7 @@ function help() {
 	].join('\n'));
 }
 
-updateNotifier({
-	packageName: pkg.name,
-	packageVersion: pkg.version
-}).notify();
+updateNotifier({pkg: pkg}).notify();
 
 if (argv.version) {
 	console.log(pkg.version);
