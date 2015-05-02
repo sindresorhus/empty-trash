@@ -4,6 +4,7 @@ var path = require('path');
 var assert = require('assert');
 var trash = require('trash');
 var userHome = require('user-home');
+var pathExists = require('path-exists');
 var emptyTrash = require('./');
 
 it('empty trash', function (cb) {
@@ -14,11 +15,11 @@ it('empty trash', function (cb) {
 
 	trash([file], function (err) {
 		assert(!err, err);
-		assert(fs.existsSync(trashFile));
+		assert(pathExists.sync(trashFile));
 
 		emptyTrash(function () {
 			assert(!err, err);
-			assert(!fs.existsSync(trashFile));
+			assert(!pathExists.sync(trashFile));
 			cb();
 		});
 	});
