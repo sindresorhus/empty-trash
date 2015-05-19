@@ -7,11 +7,9 @@
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "http://sindresorhus.com"
+    "url": "sindresorhus.com"
   },
-  "bin": {
-    "empty-trash": "cli.js"
-  },
+  "bin": "cli.js",
   "preferGlobal": true,
   "engines": {
     "node": ">=0.10.0"
@@ -27,7 +25,6 @@
   "keywords": [
     "cli-app",
     "cli",
-    "bin",
     "trash",
     "recycle",
     "file",
@@ -44,7 +41,7 @@
   "dependencies": {
     "meow": "^3.0.0",
     "run-applescript": "^1.0.0",
-    "update-notifier": "^0.3.0",
+    "update-notifier": "^0.5.0",
     "xdg-empty-trash": "^1.0.0"
   },
   "devDependencies": {
