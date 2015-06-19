@@ -8,7 +8,7 @@ var cli = meow({
 	help: [
 		'Usage',
 		'  empty-trash'
-	].join('\n')
+	]
 });
 
 updateNotifier({pkg: cli.pkg}).notify();
