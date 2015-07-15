@@ -40,6 +40,7 @@
   ],
   "dependencies": {
     "meow": "^3.3.0",
+    "nircmd": "^1.1.2",
     "run-applescript": "^1.0.0",
     "update-notifier": "^0.5.0",
     "xdg-empty-trash": "^1.0.0"
