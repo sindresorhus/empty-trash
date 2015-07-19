@@ -19,8 +19,7 @@
   },
   "files": [
     "index.js",
-    "cli.js",
-    "vendor/nircmdc.exe"
+    "cli.js"
   ],
   "keywords": [
     "cli-app",
