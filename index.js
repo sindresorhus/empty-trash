@@ -7,7 +7,7 @@ module.exports = function (cb) {
 	cb = cb || function () {};
 
 	if (process.platform === 'darwin') {
-		runApplescript('tell app "Finder" to empty trash', cb);
+		runApplescript('tell app "Finder" to if (count of items in trash) > 0 then empty trash', cb);
 		return;
 	}
 
