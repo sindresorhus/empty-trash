@@ -12,15 +12,7 @@ module.exports = function (cb) {
 	}
 
 	if (process.platform === 'win32') {
-		nircmd('emptybin', function (err) {
-			// NirCmd exits with this weird code even though it worked
-			if (err && err.code !== 4207175) {
-				cb(err);
-				return;
-			}
-
-			cb();
-		});
+		nircmd('emptybin', cb);
 		return;
 	}
 
