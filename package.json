@@ -10,7 +10,6 @@
     "url": "sindresorhus.com"
   },
   "bin": "cli.js",
-  "preferGlobal": true,
   "engines": {
     "node": ">=0.10.0"
   },
@@ -39,15 +38,15 @@
     "linux"
   ],
   "dependencies": {
-    "meow": "^3.3.0",
+    "meow": "^3.4.2",
     "run-applescript": "^1.0.0",
     "update-notifier": "^0.5.0",
     "xdg-empty-trash": "^1.0.0"
   },
   "devDependencies": {
     "mocha": "*",
-    "path-exists": "^1.0.0",
-    "trash": "^1.1.3",
-    "user-home": "^1.0.0"
+    "path-exists": "^2.0.0",
+    "trash": "^2.0.0",
+    "user-home": "^2.0.0"
   }
 }

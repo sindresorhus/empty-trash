@@ -4,12 +4,10 @@ var updateNotifier = require('update-notifier');
 var meow = require('meow');
 var emptyTrash = require('./');
 
-var cli = meow({
-	help: [
-		'Usage',
-		'  empty-trash'
-	]
-});
+var cli = meow([
+	'Usage',
+	'  $ empty-trash'
+]);
 
 updateNotifier({pkg: cli.pkg}).notify();
 

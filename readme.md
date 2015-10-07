@@ -2,12 +2,12 @@
 
 > Empty the [trash](http://en.wikipedia.org/wiki/Trash_(computing))
 
-Works on OS X, Linux and Windows.
+Works on OS X, Linux, and Windows.
 
 
 ## CLI
 
-```sh
+```
 $ npm install --global empty-trash
 ```
 
@@ -15,20 +15,20 @@ $ npm install --global empty-trash
 $ empty-trash --help
 
   Usage
-    empty-trash
+    $ empty-trash
 ```
 
 
 ## API
 
-```sh
+```
 $ npm install --save empty-trash
 ```
 
 ```js
-var emptyTrash = require('empty-trash');
+const emptyTrash = require('empty-trash');
 
-emptyTrash(function (err) {
+emptyTrash(err => {
 	console.log('done');
 });
 ```
@@ -38,9 +38,9 @@ emptyTrash(function (err) {
 
 On OS X AppleScript is used as it's the only way to do it without incurring permission issues.
 
-On Linux [xdg-empty-trash](https://github.com/kevva/xdg-empty-trash) is used.
+On Linux [`xdg-empty-trash`](https://github.com/kevva/xdg-empty-trash) is used.
 
-On Windows [recycle-empty-bin](https://github.com/sindresorhus/empty-recycle-bin) is used.
+On Windows [`recycle-empty-bin`](https://github.com/sindresorhus/empty-recycle-bin) is used.
 
 
 ## Related
