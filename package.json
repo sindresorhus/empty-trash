@@ -9,7 +9,6 @@
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com"
   },
-  "bin": "cli.js",
   "engines": {
     "node": ">=4"
   },
@@ -18,12 +17,9 @@
   },
   "files": [
     "index.js",
-    "cli.js",
     "lib"
   ],
   "keywords": [
-    "cli-app",
-    "cli",
     "trash",
     "recycle",
     "file",
@@ -38,11 +34,9 @@
     "linux"
   ],
   "dependencies": {
-    "meow": "^3.4.2",
     "pify": "^2.2.0",
     "rimraf": "^2.4.3",
     "run-applescript": "^2.0.0",
-    "update-notifier": "^0.5.0",
     "xdg-trashdir": "^2.0.0"
   },
   "devDependencies": {

@@ -5,25 +5,14 @@
 Works on OS X, Linux, and Windows.
 
 
-## CLI
-
-```
-$ npm install --global empty-trash
-```
-
-```
-$ empty-trash --help
-
-  Usage
-    $ empty-trash
-```
-
-
-## API
+## Install
 
 ```
 $ npm install --save empty-trash
 ```
+
+
+## Usage
 
 ```js
 const emptyTrash = require('empty-trash');
@@ -45,7 +34,8 @@ On Windows, [`recycle-empty-bin`](https://github.com/sindresorhus/empty-recycle-
 
 ## Related
 
-See [`trash`](https://github.com/sindresorhus/trash) for moving files/folders to the trash.
+- [empty-trash-cli](https://github.com/sindresorhus/empty-trash-cli) - CLI for this module
+- [trash](https://github.com/sindresorhus/trash) - Move files/folders to the trash
 
 
 ## License
