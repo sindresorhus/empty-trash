@@ -40,7 +40,7 @@ On OS X AppleScript is used as it's the only way to do it without incurring perm
 
 On Linux [xdg-empty-trash](https://github.com/kevva/xdg-empty-trash) is used.
 
-On Windows [NirCmd](http://www.nirsoft.net/utils/nircmd.html) is used.
+On Windows [recycle-empty-bin](https://github.com/sindresorhus/empty-recycle-bin) is used.
 
 
 ## Related
