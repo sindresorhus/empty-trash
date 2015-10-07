@@ -16,7 +16,7 @@ test(t => {
 		t.ifError(err);
 		t.true(pathExists.sync(trashFile));
 
-		fn(() => {
+		fn().then(() => {
 			t.ifError(err);
 			t.false(pathExists.sync(trashFile));
 			t.end();

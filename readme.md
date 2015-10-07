@@ -28,7 +28,7 @@ $ npm install --save empty-trash
 ```js
 const emptyTrash = require('empty-trash');
 
-emptyTrash(err => {
+emptyTrash.then(() => {
 	console.log('done');
 });
 ```

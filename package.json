@@ -11,7 +11,7 @@
   },
   "bin": "cli.js",
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=0.12.0"
   },
   "scripts": {
     "test": "xo && ava"
@@ -19,7 +19,7 @@
   "files": [
     "index.js",
     "cli.js",
-    "vendor"
+    "lib"
   ],
   "keywords": [
     "cli-app",
@@ -39,7 +39,8 @@
   ],
   "dependencies": {
     "meow": "^3.4.2",
-    "run-applescript": "^1.0.0",
+    "pify": "^2.2.0",
+    "run-applescript": "^2.0.0",
     "update-notifier": "^0.5.0",
     "xdg-empty-trash": "^1.0.0"
   },
