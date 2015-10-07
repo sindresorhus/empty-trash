@@ -14,7 +14,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "ava"
+    "test": "xo && ava"
   },
   "files": [
     "index.js",
@@ -47,6 +47,7 @@
     "ava": "*",
     "path-exists": "^2.0.0",
     "trash": "^2.0.0",
-    "user-home": "^2.0.0"
+    "user-home": "^2.0.0",
+    "xo": "*"
   }
 }
