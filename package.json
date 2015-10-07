@@ -40,9 +40,10 @@
   "dependencies": {
     "meow": "^3.4.2",
     "pify": "^2.2.0",
+    "rimraf": "^2.4.3",
     "run-applescript": "^2.0.0",
     "update-notifier": "^0.5.0",
-    "xdg-empty-trash": "^1.0.0"
+    "xdg-trashdir": "^2.0.0"
   },
   "devDependencies": {
     "ava": "*",
