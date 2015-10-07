@@ -36,11 +36,11 @@ emptyTrash.then(() => {
 
 ## Info
 
-On OS X AppleScript is used as it's the only way to do it without incurring permission issues.
+On OS X, AppleScript is used as it's the only way to do it without incurring permission issues.
 
-On Linux [`xdg-empty-trash`](https://github.com/kevva/xdg-empty-trash) is used.
+On Linux, the [XDG spec](http://standards.freedesktop.org/trash-spec/trashspec-1.0.html) is followed.
 
-On Windows [`recycle-empty-bin`](https://github.com/sindresorhus/empty-recycle-bin) is used.
+On Windows, [`recycle-empty-bin`](https://github.com/sindresorhus/empty-recycle-bin) is used.
 
 
 ## Related

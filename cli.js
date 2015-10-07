@@ -1,19 +1,15 @@
 #!/usr/bin/env node
+/* eslint-disable no-mixed-spaces-and-tabs */
 'use strict';
-var updateNotifier = require('update-notifier');
-var meow = require('meow');
-var emptyTrash = require('./');
+const updateNotifier = require('update-notifier');
+const meow = require('meow');
+const emptyTrash = require('./');
 
-var cli = meow([
-	'Usage',
-	'  $ empty-trash'
-]);
+const cli = meow(`
+	Usage
+	  $ empty-trash
+`);
 
 updateNotifier({pkg: cli.pkg}).notify();
 
-emptyTrash(function (err) {
-	if (err) {
-		console.error(err.message);
-		process.exit(1);
-	}
-});
+emptyTrash();
