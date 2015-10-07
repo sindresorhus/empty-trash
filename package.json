@@ -14,7 +14,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha --timeout 50000"
+    "test": "ava"
   },
   "files": [
     "index.js",
@@ -44,7 +44,7 @@
     "xdg-empty-trash": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "*",
+    "ava": "*",
     "path-exists": "^2.0.0",
     "trash": "^2.0.0",
     "user-home": "^2.0.0"
