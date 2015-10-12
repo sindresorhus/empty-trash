@@ -4,7 +4,7 @@ import test from 'ava';
 import trash from 'trash';
 import userHome from 'user-home';
 import pathExists from 'path-exists';
-import fn from './';
+import fn from '.';
 
 test(t => {
 	const file = 'emptytrashfixture';

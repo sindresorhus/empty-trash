@@ -35,7 +35,7 @@ On Windows, [`recycle-empty-bin`](https://github.com/sindresorhus/empty-recycle-
 ## Related
 
 - [empty-trash-cli](https://github.com/sindresorhus/empty-trash-cli) - CLI for this module
-- [trash](https://github.com/sindresorhus/trash) - Move files/folders to the trash
+- [trash](https://github.com/sindresorhus/trash) - Move files and folders to the trash
 
 
 ## License
