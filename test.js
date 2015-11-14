@@ -6,20 +6,12 @@ import userHome from 'user-home';
 import pathExists from 'path-exists';
 import fn from '.';
 
-test(t => {
+test(async t => {
 	const file = 'emptytrashfixture';
 	const trashFile = path.join(userHome, '.Trash', file);
-
 	fs.writeFileSync(file, '');
-
-	trash([file], err => {
-		t.ifError(err);
-		t.true(pathExists.sync(trashFile));
-
-		fn().then(() => {
-			t.ifError(err);
-			t.false(pathExists.sync(trashFile));
-			t.end();
-		});
-	});
+	await trash([file]);
+	t.true(pathExists.sync(trashFile));
+	await fn();
+	t.false(pathExists.sync(trashFile));
 });

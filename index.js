@@ -22,12 +22,12 @@ module.exports = () => {
 			path.join(dir, 'info')
 		];
 
-		return Promise.all(paths.map(pth => {
-			return pify(fs.readdir)(pth).then(files => {
-				return Promise.all(files.map(file => {
-					return pify(rimraf)(path.join(pth, file));
-				}));
-			});
-		}));
+		return Promise.all(paths.map(pth =>
+			pify(fs.readdir)(pth).then(files =>
+				Promise.all(files.map(file =>
+					pify(rimraf)(path.join(pth, file)))
+				)
+			)
+		));
 	});
 };

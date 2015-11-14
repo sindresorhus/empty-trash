@@ -42,8 +42,11 @@
   "devDependencies": {
     "ava": "*",
     "path-exists": "^2.0.0",
-    "trash": "^2.0.0",
+    "trash": "^3.3.0",
     "user-home": "^2.0.0",
     "xo": "*"
+  },
+  "xo": {
+    "esnext": true
   }
 }
