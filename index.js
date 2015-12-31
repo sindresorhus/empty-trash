@@ -16,7 +16,7 @@ function getDisks () {
 }
 
 
-function getTrash (disks) {
+function getTrashes (disks) {
 	let uid = process.getuid();
 	let homedir = os.homedir();
 	return disks
@@ -49,7 +49,7 @@ module.exports = () => {
 		return pify(childProcess.execFile)(path.join(__dirname, 'lib', 'empty-recycle-bin.exe'));
 	}
 
-	return getDisks().then(getTrash).then(trashes =>
+	return getDisks().then(getTrashes).then(trashes =>
 		Promise.all(trashes.map(emptyTrash))
 	);
 };
