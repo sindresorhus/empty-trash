@@ -6,6 +6,17 @@ const runApplescript = require('run-applescript');
 const pify = require('pify');
 const rimraf = require('rimraf');
 const xdgTrashdir = require('xdg-trashdir');
+const pathExists = require('path-exists');
+
+const filterExists = dir => {
+	return pathExists(dir).then(exists => exists ? dir : false);
+};
+
+const emptyTrash = dir => {
+	return pify(fs.readdir)(dir).then(files => {
+		return Promise.all(files.map(file => pify(rimraf)(path.join(dir, file))));
+	});
+};
 
 module.exports = () => {
 	if (process.platform === 'darwin') {
@@ -16,18 +27,8 @@ module.exports = () => {
 		return pify(childProcess.execFile)(path.join(__dirname, 'lib', 'empty-recycle-bin.exe'));
 	}
 
-	return xdgTrashdir().then(dir => {
-		const paths = [
-			path.join(dir, 'files'),
-			path.join(dir, 'info')
-		];
-
-		return Promise.all(paths.map(pth =>
-			pify(fs.readdir)(pth).then(files =>
-				Promise.all(files.map(file =>
-					pify(rimraf)(path.join(pth, file)))
-				)
-			)
-		));
-	});
+	return xdgTrashdir.all()
+		.then(dirs => Promise.all(dirs.map(filterExists)))
+		.then(dirs => dirs.filter(Boolean))
+		.then(dirs => Promise.all(dirs.map(emptyTrash)));
 };
