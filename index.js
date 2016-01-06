@@ -23,6 +23,6 @@ module.exports = () => {
 	}
 
 	return xdgTrashdir.all()
-		.then(dirs => dirs.filter(pathExists.sync))
+		.then(dirs => Promise.all(dirs.filter(pathExists)))
 		.then(dirs => Promise.all(dirs.map(emptyTrash)));
 };

@@ -34,11 +34,11 @@
     "linux"
   ],
   "dependencies": {
+    "path-exists": "^2.1.0",
     "pify": "^2.2.0",
     "rimraf": "^2.4.3",
     "run-applescript": "^2.0.0",
-    "xdg-trashdir": "^2.1.0",
-    "path-exists": "^2.0.0"
+    "xdg-trashdir": "^2.1.0"
   },
   "devDependencies": {
     "ava": "*",
