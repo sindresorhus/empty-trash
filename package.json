@@ -29,6 +29,7 @@
     "directories",
     "empty",
     "clear",
+    "macos",
     "osx",
     "windows",
     "linux"

@@ -2,7 +2,7 @@
 
 > Empty the [trash](http://en.wikipedia.org/wiki/Trash_(computing))
 
-Works on OS X, Linux, and Windows.
+Works on macOS, Linux, and Windows.
 
 
 ## Install
@@ -25,7 +25,7 @@ emptyTrash().then(() => {
 
 ## Info
 
-On OS X, AppleScript is used as it's the only way to do it without incurring permission issues.
+On macOS, AppleScript is used as it's the only way to do it without incurring permission issues.
 
 On Linux, the [XDG spec](http://standards.freedesktop.org/trash-spec/trashspec-1.0.html) is followed.
 
