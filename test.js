@@ -4,7 +4,7 @@ import test from 'ava';
 import trash from 'trash';
 import userHome from 'user-home';
 import pathExists from 'path-exists';
-import fn from '.';
+import m from '.';
 
 test(async t => {
 	const file = 'emptytrashfixture';
@@ -12,6 +12,6 @@ test(async t => {
 	fs.writeFileSync(file, '');
 	await trash([file]);
 	t.true(pathExists.sync(trashFile));
-	await fn();
+	await m();
 	t.false(pathExists.sync(trashFile));
 });

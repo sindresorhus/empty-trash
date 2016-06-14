@@ -40,4 +40,4 @@ On Windows, [`recycle-empty-bin`](https://github.com/sindresorhus/empty-recycle-
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

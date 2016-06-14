@@ -8,9 +8,7 @@ const rimraf = require('rimraf');
 const xdgTrashdir = require('xdg-trashdir');
 const pathExists = require('path-exists');
 
-const filterExists = dir => {
-	return pathExists(dir).then(exists => exists ? dir : false);
-};
+const filterExists = dir => pathExists(dir).then(exists => exists ? dir : false);
 
 const emptyTrash = dir => {
 	return pify(fs.readdir)(dir).then(files => {
