@@ -35,6 +35,7 @@
     "linux"
   ],
   "dependencies": {
+    "p-filter": "^1.0.0",
     "path-exists": "^3.0.0",
     "pify": "^2.2.0",
     "rimraf": "^2.4.3",

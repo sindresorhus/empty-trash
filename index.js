@@ -7,8 +7,7 @@ const pify = require('pify');
 const rimraf = require('rimraf');
 const xdgTrashdir = require('xdg-trashdir');
 const pathExists = require('path-exists');
-
-const filterExists = dir => pathExists(dir).then(exists => exists ? dir : false);
+const pFilter = require('p-filter');
 
 const emptyTrash = dir => {
 	return pify(fs.readdir)(dir).then(files => {
@@ -26,7 +25,6 @@ module.exports = () => {
 	}
 
 	return xdgTrashdir.all()
-		.then(dirs => Promise.all(dirs.map(filterExists)))
-		.then(dirs => dirs.filter(Boolean))
+		.then(dirs => pFilter(dirs, pathExists))
 		.then(dirs => Promise.all(dirs.map(emptyTrash)));
 };
