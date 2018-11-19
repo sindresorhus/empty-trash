@@ -1,6 +1,6 @@
 # empty-trash [![Build Status](https://travis-ci.org/sindresorhus/empty-trash.svg?branch=master)](https://travis-ci.org/sindresorhus/empty-trash)
 
-> Empty the [trash](http://en.wikipedia.org/wiki/Trash_(computing))
+> Empty the [trash](https://en.wikipedia.org/wiki/Trash_(computing))
 
 Works on macOS, Linux, and Windows.
 
@@ -8,7 +8,7 @@ Works on macOS, Linux, and Windows.
 ## Install
 
 ```
-$ npm install --save empty-trash
+$ npm install empty-trash
 ```
 
 
@@ -17,9 +17,9 @@ $ npm install --save empty-trash
 ```js
 const emptyTrash = require('empty-trash');
 
-emptyTrash().then(() => {
-	console.log('done');
-});
+(async () => {
+	await emptyTrash();
+})();
 ```
 
 

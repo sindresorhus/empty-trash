@@ -1,17 +1,17 @@
 import fs from 'fs';
+import os from 'os';
 import path from 'path';
 import test from 'ava';
 import trash from 'trash';
-import userHome from 'user-home';
 import pathExists from 'path-exists';
-import m from '.';
+import emptyTrash from '.';
 
-test(async t => {
-	const file = 'emptytrashfixture';
-	const trashFile = path.join(userHome, '.Trash', file);
+test('main', async t => {
+	const file = 'empty-trash-fixture';
+	const trashFile = path.join(os.homedir(), '.Trash', file);
 	fs.writeFileSync(file, '');
 	await trash([file]);
 	t.true(pathExists.sync(trashFile));
-	await m();
+	await emptyTrash();
 	t.false(pathExists.sync(trashFile));
 });

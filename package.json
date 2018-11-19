@@ -1,54 +1,49 @@
 {
-  "name": "empty-trash",
-  "version": "2.1.1",
-  "description": "Empty the trash",
-  "license": "MIT",
-  "repository": "sindresorhus/empty-trash",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js",
-    "lib"
-  ],
-  "keywords": [
-    "trash",
-    "recycle",
-    "file",
-    "files",
-    "dir",
-    "directory",
-    "directories",
-    "empty",
-    "clear",
-    "macos",
-    "osx",
-    "windows",
-    "linux"
-  ],
-  "dependencies": {
-    "p-filter": "^1.0.0",
-    "path-exists": "^3.0.0",
-    "pify": "^2.2.0",
-    "rimraf": "^2.4.3",
-    "run-applescript": "^3.0.0",
-    "xdg-trashdir": "^2.1.0"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "trash": "^3.3.0",
-    "user-home": "^2.0.0",
-    "xo": "*"
-  },
-  "xo": {
-    "esnext": true
-  }
+	"name": "empty-trash",
+	"version": "2.1.1",
+	"description": "Empty the trash",
+	"license": "MIT",
+	"repository": "sindresorhus/empty-trash",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js",
+		"lib"
+	],
+	"keywords": [
+		"trash",
+		"recycle",
+		"file",
+		"files",
+		"dir",
+		"directory",
+		"directories",
+		"empty",
+		"clear",
+		"macos",
+		"osx",
+		"windows",
+		"linux"
+	],
+	"dependencies": {
+		"p-filter": "^1.0.0",
+		"path-exists": "^3.0.0",
+		"rimraf": "^2.4.3",
+		"run-applescript": "^3.0.0",
+		"xdg-trashdir": "^2.1.0"
+	},
+	"devDependencies": {
+		"ava": "^0.25.0",
+		"trash": "^4.3.0",
+		"xo": "^0.23.0"
+	}
 }
