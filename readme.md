@@ -29,7 +29,7 @@ On macOS, AppleScript is used as it's the only way to do it without incurring pe
 
 On Linux, the [XDG spec](http://standards.freedesktop.org/trash-spec/trashspec-1.0.html) is followed.
 
-On Windows, [`recycle-empty-bin`](https://github.com/sindresorhus/empty-recycle-bin) is used.
+On Windows, [`empty-recycle-bin`](https://github.com/sindresorhus/empty-recycle-bin) is used.
 
 
 ## Related
