@@ -3,7 +3,7 @@ const {promisify} = require('util');
 const fs = require('fs');
 const path = require('path');
 const childProcess = require('child_process');
-const runApplescript = require('run-applescript');
+const runJxa = require('run-jxa');
 const rimraf = require('rimraf');
 const xdgTrashdir = require('xdg-trashdir');
 const pathExists = require('path-exists');
@@ -25,7 +25,13 @@ const linuxEmptyTrashes = async () => {
 
 module.exports = async () => {
 	if (process.platform === 'darwin') {
-		await runApplescript('tell app "Finder" to if (count of items in trash) > 0 then empty trash');
+		await runJxa(`
+			const finder = Application('Finder');
+
+			if (finder.trash.items.length > 0) {
+				finder.empty();
+			}
+		`);
 		return;
 	}
 
