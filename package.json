@@ -25,13 +25,11 @@
 		"recycle",
 		"file",
 		"files",
-		"dir",
 		"directory",
 		"directories",
 		"empty",
 		"clear",
 		"macos",
-		"osx",
 		"windows",
 		"linux"
 	],
