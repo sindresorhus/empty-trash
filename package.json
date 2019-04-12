@@ -13,10 +13,11 @@
 		"node": ">=8"
 	},
 	"scripts": {
-		"test": "xo && ava"
+		"test": "xo && ava && tsd"
 	},
 	"files": [
 		"index.js",
+		"index.d.ts",
 		"lib"
 	],
 	"keywords": [
@@ -35,15 +36,16 @@
 		"linux"
 	],
 	"dependencies": {
-		"p-filter": "^1.0.0",
-		"path-exists": "^3.0.0",
+		"p-filter": "^2.1.0",
+		"path-exists": "^4.0.0",
 		"rimraf": "^2.4.3",
-		"run-jxa": "^1.2.0",
+		"run-jxa": "^2.0.0",
 		"xdg-trashdir": "^2.1.0"
 	},
 	"devDependencies": {
-		"ava": "^0.25.0",
-		"trash": "^4.3.0",
-		"xo": "^0.23.0"
+		"ava": "^1.4.1",
+		"trash": "^5.2.0",
+		"tsd": "^0.7.2",
+		"xo": "^0.24.0"
 	}
 }
