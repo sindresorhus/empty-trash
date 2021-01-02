@@ -1,4 +1,4 @@
-# empty-trash [![Build Status](https://travis-ci.com/sindresorhus/empty-trash.svg?branch=master)](https://travis-ci.com/sindresorhus/empty-trash)
+# empty-trash
 
 > Empty the [trash](https://en.wikipedia.org/wiki/Trash_(computing))
 
