@@ -6,18 +6,16 @@ Works on macOS, Linux, and Windows.
 
 ## Install
 
-```
-$ npm install empty-trash
+```sh
+npm install empty-trash
 ```
 
 ## Usage
 
 ```js
-const emptyTrash = require('empty-trash');
+import emptyTrash from 'empty-trash';
 
-(async () => {
-	await emptyTrash();
-})();
+await emptyTrash();
 ```
 
 ## Info

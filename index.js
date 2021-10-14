@@ -1,29 +1,30 @@
-'use strict';
-const {promisify} = require('util');
-const fs = require('fs');
-const path = require('path');
-const childProcess = require('child_process');
-const runJxa = require('run-jxa');
-const rimraf = require('rimraf');
-const xdgTrashdir = require('xdg-trashdir');
-const pathExists = require('path-exists');
-const pFilter = require('p-filter');
+import process from 'node:process';
+import {promisify} from 'node:util';
+import childProcess from 'node:child_process';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {runJxa} from 'run-jxa';
+import xdgTrashdir from 'xdg-trashdir';
+import {pathExists} from 'path-exists';
+import pFilter from 'p-filter';
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const execFileP = promisify(childProcess.execFile);
-const readdirP = promisify(fs.readdir);
-const rimrafP = promisify(rimraf);
+
+const windowBinaryPath = path.join(__dirname, 'lib/empty-recycle-bin.exe');
 
 const linuxEmptyTrash = async directory => {
-	const files = await readdirP(directory);
-	await Promise.all(files.map(file => rimrafP(path.join(directory, file))));
+	const files = await fs.readdir(directory);
+	await Promise.all(files.map(file => fs.rm(path.join(directory, file), {recursive: true})));
 };
 
 const linuxEmptyTrashes = async () => {
 	const directories = await pFilter(await xdgTrashdir.all(), pathExists);
-	await Promise.all(directories.map(linuxEmptyTrash));
+	await Promise.all(directories.map(directory => linuxEmptyTrash(directory)));
 };
 
-module.exports = async () => {
+export default async function emptyTrash() {
 	if (process.platform === 'darwin') {
 		await runJxa(`
 			const finder = Application('Finder');
@@ -36,9 +37,9 @@ module.exports = async () => {
 	}
 
 	if (process.platform === 'win32') {
-		await execFileP(path.join(__dirname, 'lib/empty-recycle-bin.exe'));
+		await execFileP(windowBinaryPath);
 		return;
 	}
 
 	await linuxEmptyTrashes();
-};
+}

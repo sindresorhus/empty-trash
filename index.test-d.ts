@@ -1,4 +1,4 @@
 import {expectType} from 'tsd';
-import emptyTrash = require('.');
+import emptyTrash from './index.js';
 
 expectType<Promise<void>>(emptyTrash());

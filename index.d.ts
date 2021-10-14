@@ -3,13 +3,9 @@ Empty the [trash](https://en.wikipedia.org/wiki/Trash_(computing)).
 
 @example
 ```
-import emptyTrash = require('empty-trash');
+import emptyTrash from 'empty-trash';
 
-(async () => {
-	await emptyTrash();
-})();
+await emptyTrash();
 ```
 */
-declare function emptyTrash(): Promise<void>;
-
-export = emptyTrash;
+export default function emptyTrash(): Promise<void>;

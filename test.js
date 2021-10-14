@@ -1,17 +1,16 @@
-import fs from 'fs';
-import os from 'os';
-import path from 'path';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
 import test from 'ava';
 import trash from 'trash';
-import pathExists from 'path-exists';
-import emptyTrash from '.';
+import emptyTrash from './index.js';
 
 test('main', async t => {
 	const file = 'empty-trash-fixture';
 	const trashFile = path.join(os.homedir(), '.Trash', file);
 	fs.writeFileSync(file, '');
 	await trash([file]);
-	t.true(pathExists.sync(trashFile));
+	t.true(fs.existsSync(trashFile));
 	await emptyTrash();
-	t.false(pathExists.sync(trashFile));
+	t.false(fs.existsSync(trashFile));
 });
